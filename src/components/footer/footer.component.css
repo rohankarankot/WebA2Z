@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.logo {
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+footer {
+    background-color: #23222A;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 30px;
+    padding-top: 40px;
+    margin: 0px 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px
+}
+footer i {
+    color: #ea6143;
+    font-weight: 500;
+}
+footer p {
+    color: gray;
+}
+
+.icons i{
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+}
