@@ -1,6 +1,6 @@
 import React from "react";
 import { BRAND_NAME_SHORT } from "../../constants";
-import styles from "./footer.component.css";
+import styles from "./footer 2.component.css";
 
 function FooterComponent() {
   return (
