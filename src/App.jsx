@@ -7,17 +7,12 @@ import HeroComponent from "./components/HeroSection/Hero.component";
 import HighlightComponent from "./components/highlights/highlight.component";
 import { useEffect, useState } from "react";
 import BodySectionComponent from "./components/bodySection/bodySection.component";
-
+import data from "./mock/feed.json";
 function App() {
   const [products, setter] = useState("initialData");
-  const getProducts = async () => {
-    const data = await fetch("https://dummyjson.com/products");
-    const actualData = await data.json();
-    setter(actualData);
-  };
 
   useEffect(() => {
-    getProducts();
+    setter(data.data);
   }, []);
 
   return (
@@ -27,7 +22,7 @@ function App() {
       <HeroComponent />
 
       <div>
-        <BodySectionComponent allProducts={products} />{" "}
+        <BodySectionComponent allProducts={products} />
       </div>
 
       <FooterComponent />

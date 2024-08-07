@@ -1,0 +1,155 @@
+{
+    "data":[
+        {
+            "id": 1,
+            "title": "Paneer Pizza 30' Garlic Topping",
+            "des": "Delicious paneer pizza with a garlic topping for an extra burst of flavor.",
+            "rating": 4.5,
+            "stock": 100,
+            "vendor": "Dominozz",
+            "price": 500,
+            "discount": 10,
+            "thumbnail": "https://foodoncall.co.in/wp-content/uploads/2017/10/chatpata-paneer-pizza.jpg",
+            "images": [
+                "https://foodoncall.co.in/wp-content/uploads/2017/10/chatpata-paneer-pizza.jpg",
+                "https://i.pinimg.com/originals/22/94/70/22947071fd9707f6a5daacaad55b7c34.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Classic Cheeseburger",
+            "des": "A classic cheeseburger with a juicy beef patty, melted cheese, and fresh veggies.",
+            "rating": 4.7,
+            "stock": 150,
+            "vendor": "Burger King",
+            "price": 250,
+            "discount": 5,
+            "thumbnail": "https://example.com/images/classic-cheeseburger.jpg",
+            "images": [
+                "https://example.com/images/classic-cheeseburger.jpg",
+                "https://example.com/images/classic-cheeseburger2.jpg"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Spicy Chicken Wings",
+            "des": "Tangy and spicy chicken wings perfect for a snack or meal.",
+            "rating": 4.6,
+            "stock": 80,
+            "vendor": "Wings World",
+            "price": 300,
+            "discount": 15,
+            "thumbnail": "https://example.com/images/spicy-chicken-wings.jpg",
+            "images": [
+                "https://example.com/images/spicy-chicken-wings.jpg",
+                "https://example.com/images/spicy-chicken-wings2.jpg"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Vegetable Spring Rolls",
+            "des": "Crispy spring rolls filled with fresh vegetables and served with dipping sauce.",
+            "rating": 4.4,
+            "stock": 120,
+            "vendor": "Spring Roll House",
+            "price": 150,
+            "discount": 8,
+            "thumbnail": "https://example.com/images/vegetable-spring-rolls.jpg",
+            "images": [
+                "https://example.com/images/vegetable-spring-rolls.jpg",
+                "https://example.com/images/vegetable-spring-rolls2.jpg"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "BBQ Ribs",
+            "des": "Tender BBQ ribs coated in a smoky barbecue sauce.",
+            "rating": 4.8,
+            "stock": 60,
+            "vendor": "Rib Shack",
+            "price": 700,
+            "discount": 20,
+            "thumbnail": "https://example.com/images/bbq-ribs.jpg",
+            "images": [
+                "https://example.com/images/bbq-ribs.jpg",
+                "https://example.com/images/bbq-ribs2.jpg"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Falafel Wrap",
+            "des": "A savory wrap filled with crispy falafel, fresh veggies, and tahini sauce.",
+            "rating": 4.3,
+            "stock": 130,
+            "vendor": "Wrap It Up",
+            "price": 200,
+            "discount": 10,
+            "thumbnail": "https://example.com/images/falafel-wrap.jpg",
+            "images": [
+                "https://example.com/images/falafel-wrap.jpg",
+                "https://example.com/images/falafel-wrap2.jpg"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Cheese Nachos",
+            "des": "Crunchy nachos topped with melted cheese and jalapeños.",
+            "rating": 4.6,
+            "stock": 90,
+            "vendor": "Nacho Nation",
+            "price": 180,
+            "discount": 5,
+            "thumbnail": "https://example.com/images/cheese-nachos.jpg",
+            "images": [
+                "https://example.com/images/cheese-nachos.jpg",
+                "https://example.com/images/cheese-nachos2.jpg"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Chicken Quesadilla",
+            "des": "A cheesy quesadilla with seasoned chicken and vegetables.",
+            "rating": 4.7,
+            "stock": 110,
+            "vendor": "Quesadilla Corner",
+            "price": 250,
+            "discount": 12,
+            "thumbnail": "https://example.com/images/chicken-quesadilla.jpg",
+            "images": [
+                "https://example.com/images/chicken-quesadilla.jpg",
+                "https://example.com/images/chicken-quesadilla2.jpg"
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Onion Rings",
+            "des": "Golden, crispy onion rings served with a side of dipping sauce.",
+            "rating": 4.2,
+            "stock": 140,
+            "vendor": "Ring King",
+            "price": 120,
+            "discount": 7,
+            "thumbnail": "https://example.com/images/onion-rings.jpg",
+            "images": [
+                "https://example.com/images/onion-rings.jpg",
+                "https://example.com/images/onion-rings2.jpg"
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Garlic Breadsticks",
+            "des": "Warm breadsticks brushed with garlic butter and herbs.",
+            "rating": 4.4,
+            "stock": 95,
+            "vendor": "Breadstick Bistro",
+            "price": 160,
+            "discount": 6,
+            "thumbnail": "https://example.com/images/garlic-breadsticks.jpg",
+            "images": [
+                "https://example.com/images/garlic-breadsticks.jpg",
+                "https://example.com/images/garlic-breadsticks2.jpg"
+            ]
+        }
+    ]
+    
+}
