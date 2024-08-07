@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import BodySectionComponent from "./components/bodySection/bodySection.component";
 import data from "./mock/feed.json";
 function App() {
-  const [products, setter] = useState("initialData");
+  const [products, setter] = useState();
 
   useEffect(() => {
     setter(data.data);
