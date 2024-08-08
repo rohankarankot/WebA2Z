@@ -52,8 +52,8 @@ function NavbarComponent() {
                                   className={({ isActive }) => {
                                     return ` ${
                                       isActive
-                                        ? `dropdown-item active ${styles.gap_10}`
-                                        : `dropdown-item ${styles.gap_10}`
+                                        ? `dropdown-item active`
+                                        : `dropdown-item`
                                     }`;
                                   }}
                                 >
