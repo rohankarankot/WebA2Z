@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BRAND_NAME_SHORT } from "../../constants";
 import styles from "./footer 2.component.css";
+import { StoreContext } from "../../context/storeContext";
 
 function FooterComponent() {
+  const { setValue } = useContext(StoreContext);
   return (
     <footer>
+      <button
+        onClick={() => {
+          setValue("random" + Math.round(Math.random() * 10)); // another way => ~~(Math.random() * 10)
+        }}
+      >
+        change
+      </button>
       <div className="logo">{BRAND_NAME_SHORT}</div>
 
       <div className="copyrgt">
