@@ -26,7 +26,7 @@ function ItemCardComponent({ product }) {
           </div>
           <h5>₹{product.price-product.price*product.discount/100}</h5>
         </div>
-        <h6>Rating: <span style={{color: ratingc}}>{product.rating}</span></h6>
+        <h6>Rating: <span class="badge bg-dark" style={{color: ratingc, fontWeight:700}}>{product.rating}</span></h6>
         <p className="text-center">{product.des}</p>
         <Link to={"/product"}>
           <button className="btn btn-link">View More</button>
