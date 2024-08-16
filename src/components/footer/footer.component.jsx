@@ -4,6 +4,7 @@ import styles from "./footer 2.component.css";
 
 function FooterComponent() {
   return (
+    <div className="dflex col-12 row-1">
     <footer>
       <div className="logo">{BRAND_NAME_SHORT}</div>
 
@@ -19,7 +20,9 @@ function FooterComponent() {
         <i className="bx bxl-facebook"></i>
         <i className="bx bxl-youtube"></i>
       </div>
+
     </footer>
+    </div>
   );
 }
 
