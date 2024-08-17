@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import styles from "./navbar.module.css";
 import { BRAND_NAME_SHORT } from "../../constants";
 import { Link, NavLink } from "react-router-dom";
 import { ROUTES } from "../../routes";
+import { CartContext } from "../../context/cart.context";
 
 function NavbarComponent() {
+  const { cart } = useContext(CartContext);
   return (
     <div>
       <nav
@@ -85,7 +87,15 @@ function NavbarComponent() {
                 );
               })}
             </ul>
-            <button className="btn btn-primary">Profile</button>
+            <button type="button" class="btn btn-primary position-relative">
+              cart
+              <i class="fa-solid fa-cart-shopping"></i>
+              {
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                  {cart}
+                </span>
+              }
+            </button>
           </div>
         </div>
       </nav>
