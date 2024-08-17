@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ImageSliderComponent from "./imageSlider.component";
+import { useSearchParams } from "react-router-dom";
+import data from "../../mock/feed.json";
 
 function ProductDec() {
+  let [searchParams] = useSearchParams();
+  const [currentProd, setcurrentProd] = useState();
+
+  useEffect(() => {
+    const productId = searchParams.get("id");
+    const currentProduct = data.data?.filter(
+      (product) => product.id == productId
+    );
+    setcurrentProd(currentProduct[0]);
+  }, [searchParams]);
+
   return (
     <div className="container ">
       <div className="my-4">
         <div className="row">
-          <img
-            src="https://cookingfromheart.com/wp-content/uploads/2017/03/Paneer-Tikka-Masala-4.jpg"
-            alt=""
-            style={{ width: "500px", objectFit: "contain" }}
-            className="col-md-6"
-          />
-
+          <ImageSliderComponent images={currentProd?.images} />
           <div className="pdp col-md-6">
-            <p style={{ fontSize: "24px" }}>Product's title</p>
+            <p style={{ fontSize: "24px" }}>{currentProd?.title}</p>
             askldfklsdf Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Repellat dolores enim delectus pariatur error, sapiente quam eaque
             culpa nobis ipsam rerum eius aspernatur non fugit laboriosam, rem
