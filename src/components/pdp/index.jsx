@@ -22,19 +22,32 @@ function ProductDec() {
           <ImageSliderComponent images={currentProd?.images} />
           <div className="pdp col-md-6">
             <p style={{ fontSize: "24px" }}>{currentProd?.title}</p>
-            askldfklsdf Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repellat dolores enim delectus pariatur error, sapiente quam eaque
-            culpa nobis ipsam rerum eius aspernatur non fugit laboriosam, rem
-            cum magni aliquam! Repellat eligendi repudiandae velit dolorem
-            adipisci. Assumenda qui nulla debitis nisi, voluptas rem
-            necessitatibus earum veritatis, ut natus expedita quibusdam quam
-            officiis tempora doloremque repellendus deleniti ullam quos repellat
-            sit laudantium cumque, perspiciatis molestiae. Totam vel deleniti
-            labore officia, quisquam illum quis quos inventore tempore minus
-            eius autem numquam eligendi delectus repellendus assumenda impedit
-            praesentium. Non recusandae exercitationem debitis commodi possimus
-            in soluta quis, laudantium nisi, doloribus placeat eum odio ratione
-            quaerat illum facilis dolor dicta voluptatem repellendus iusto?
+            <p className="text-center">{currentProd?.des}</p>
+            <div className="d-flex gap-2">
+              <h5 className="text-success">
+                ₹
+                {currentProd?.price -
+                  (currentProd?.price * currentProd?.discount) / 100}
+              </h5>
+              <s className="text-danger">₹{currentProd?.price}</s>
+              <p className="text-warning">{currentProd?.discount}% off</p>
+            </div>
+            <h6>
+              Rating:{" "}
+              <span className="badge bg-dark">{currentProd?.rating}</span>
+            </h6>
+            <hr />
+            <div className="btn-group" role="group">
+              <button type="button" className="btn btn-danger">
+                -
+              </button>
+              <button type="button" className="btn btn-primary-outlined">
+                Add
+              </button>
+              <button type="button" className="btn btn-success">
+                +
+              </button>
+            </div>
           </div>
         </div>
       </div>

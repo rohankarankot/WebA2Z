@@ -9,19 +9,16 @@ function ItemCardComponent({ product }) {
   else ratingc = "rgb(255,69,69)";
   return (
     <div className="card">
-      <h3>{product.vendor}</h3>
+      <h4 className="text-center">{product.title}</h4>
+      <h6>({product.vendor})</h6>
       <img
         src={product.thumbnail}
         className="card-img-top"
         alt={product.title}
       />
       <div className="card-body">
-        <h4 className="text-center">{product.title}</h4>
-        <div className="price">
-          <div
-            className="price-before-discount"
-            style={{ display: "flex", gap: "10px" }}
-          >
+        <div className="price d-flex gap-2 align-item-center">
+          <div className="price-before-discount">
             <b>
               <i>
                 <p>
@@ -29,11 +26,11 @@ function ItemCardComponent({ product }) {
                 </p>
               </i>
             </b>
-            <i className="offer">
-              <p>{product.discount}% off</p>
-            </i>
           </div>
           <h5>₹{product.price - (product.price * product.discount) / 100}</h5>
+          <i className="offer">
+            <p>{product.discount}% off</p>
+          </i>
         </div>
         <h6>
           Rating:{" "}
@@ -44,8 +41,7 @@ function ItemCardComponent({ product }) {
             {product.rating}
           </span>
         </h6>
-        <p className="text-center">{product.des}</p>
-        <Link to={"/product"}>
+        <Link to={`/product?id=${product.id}`}>
           <button className="btn btn-link">View More</button>
         </Link>
       </div>
