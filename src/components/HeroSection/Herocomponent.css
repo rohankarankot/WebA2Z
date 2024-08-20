@@ -1,0 +1,20 @@
+.heading-style {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.hero-color-theme {
+  color: coral;
+}
+.hero-ul
+{
+  
+  font-weight: bold;
+}
+.hero-background{
+margin-top: 20px;
+
+}
