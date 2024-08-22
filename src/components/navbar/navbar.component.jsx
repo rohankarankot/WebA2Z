@@ -87,6 +87,14 @@ function NavbarComponent() {
                 );
               })}
             </ul>
+           <Link to={"/login"} >
+           <button type="button" class="btn btn-link" style={{marginRight:"20px"}}>
+              Login
+              <i class="fa-solid fa-right-to-bracket"style={{marginLeft:"5px"}} ></i>
+             
+            </button>
+           
+           </Link>
             <button type="button" class="btn btn-primary position-relative">
               cart
               <i class="fa-solid fa-cart-shopping"></i>

@@ -1,67 +1,64 @@
-
 .wrapper {
   padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    background-color: #7BD3EA;
-  }
-  
-  .card {
-    background-color: #A1EEBD;
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24rem;
-    border-radius: 20px;
-    border: 1px solid black;
-    transition: transform 0.2s;
-  }
-  
-  .card img {
-    padding: 5px;
-    width: 150px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: whitesmoke;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  background-color: #7BD3EA;
+}
 
-  .card:hover {
-    cursor: pointer;
-  }
-  
-  .card:hover{
-    transform: scale(1.03); 
-    
-  }
-  
-  .card h5 {
-    font-size: 23px;
-    margin-bottom: 20px;
-    font-weight: 600;
-  }
-  
-  .card p {
-    font-size: 15px;
-    color: #666;
-  }
+.card {
+  background-color: #A1EEBD;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  border-radius: 20px;
+  border: 1px solid black;
+  transition: transform 0.2s;
+}
 
-  .btn-link {
-    background-color: #F6D6D6;
-    border-radius: 20px;
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-  }
+.card img {
+  padding: 5px;
+  width: 150px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: whitesmoke;
+}
 
-  .btn-link:hover {
-    text-decoration: underline;
-    color: black;
-    background-color: #F6D6D6;
-    
-  }
-  
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+
+}
+
+.card h5 {
+  font-size: 23px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 15px;
+  color: #666;
+}
+
+.btn-link {
+  background-color: #F6D6D6;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn-link:hover {
+  color: black;
+  background-color: #F6D6D6;
+
+}
