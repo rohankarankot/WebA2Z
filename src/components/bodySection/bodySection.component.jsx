@@ -6,7 +6,7 @@ const BodySectionComponent = ({ allProducts }) => {
   return (
     <div className="wrapper">
       {allProducts !== undefined &&
-        allProducts.map((product, i) => {
+        allProducts?.slice(3, 23).map((product, i) => {
           return <ItemCardComponent product={product} />;
         })}
     </div>

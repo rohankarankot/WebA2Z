@@ -2,32 +2,73 @@ import axios from 'axios';
 import React, { useState } from 'react'
 
 function LoginComponent() {
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [cPassword, setCPassword] = useState("")
+
+    const initialValues = {
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        cPassword: "",
+    }
+
+
+    const [formValue, setFormValue] = useState(initialValues)
+
+
+
+
+
+    const handleOnChange = (event) => {
+        let { name, value } = event.target
+        setFormValue((previous) => {
+            return { ...previous, [name]: value }
+        })
+
+    }
+
+
+
+    // let obj = { name: "rohan", stream: "frontEnd" }
+    // console.log('obj:~~~> ', obj);
+
+    // let abc = "stream"
+
+    // obj = { ...obj, [abc]: "Foostack", name: "dadada" }
+    // console.log('new obj: ~~~> ', obj);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        let config = {
-            method: 'post',
-            maxBodyLength: Infinity,
-            url: 'https://globalsoo.onrender.com/auth/register',
+        // let config = {
+        //     method: 'post',
+        //     url: 'https://globalsoo.onrender.com/authentication/register',
 
-            data: {
-                firstName, lastName, email, password, registeredAt: "DRIFT"
-            }
-        };
-        axios.request(config)
-            .then((response) => {
-                console.log(JSON.stringify(response.data));
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        //     data: {
+        //         firstName, lastName, email, password, registeredAt: "DRIFT"
+        //     }
+        // };
+        // axios.request(config)
+        //     .then((response) => {
+        //         console.log(JSON.stringify(response.data));
+        //     })
+        //     .catch((error) => {
+        //         console.error(error);
+        //     });
     }
     return (
         <div className='container p-4'>
@@ -35,21 +76,21 @@ function LoginComponent() {
             <form className="row g-3 needs-validation" onSubmit={handleSubmit}>
                 <div className="col-md-4">
                     <label for="validationCustom01" className="form-label">First name</label>
-                    <input onChange={(e) => setFirstName(e.target.value)} type="text" className="form-control" id="validationCustom01" value={firstName} />
+                    <input onChange={(e) => handleOnChange(e)} type="text" className="form-control" id="validationCustom01" value={formValue.firstName} name='firstName' />
                     <div className="valid-feedback">
                         Looks good!
                     </div>
                 </div>
                 <div className="col-md-4">
                     <label for="validationCustom02" className="form-label">Last name</label>
-                    <input onChange={(e) => setLastName(e.target.value)} type="text" className="form-control" id="validationCustom02" value={lastName} />
+                    <input onChange={(e) => handleOnChange(e)} type="text" className="form-control" id="validationCustom02" value={formValue.lastName} name="lastName" />
                     <div className="valid-feedback">
                         Looks good!
                     </div>
                 </div>
                 <div className="col-md-4">
                     <label for="validationCustom02" className="form-label">Email</label>
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="validationCustom02" value={email} />
+                    <input onChange={(e) => handleOnChange(e)} type="email" className="form-control" id="validationCustom02" value={formValue.email} name='email' />
                     <div className="valid-feedback">
                         Looks good!
                     </div>
@@ -57,14 +98,14 @@ function LoginComponent() {
 
                 <div className="col-md-4">
                     <label for="validationCustom02" className="form-label">Password</label>
-                    <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="validationCustom02" value={password} />
+                    <input onChange={(e) => handleOnChange(e)} type="password" className="form-control" id="validationCustom02" value={formValue.password} name="password" />
                     <div className="valid-feedback">
                         Looks good!
                     </div>
                 </div>
                 <div className="col-md-4">
                     <label for="validationCustom02" className="form-label">Confirm Password</label>
-                    <input onChange={(e) => setCPassword(e.target.value)} type="password" className="form-control" id="validationCustom02" value={cPassword} />
+                    <input onChange={(e) => handleOnChange(e)} type="password" className="form-control" id="validationCustom02" value={formValue.cPassword} name='cPassword' />
                     <div className="valid-feedback">
                         Looks good!
                     </div>

@@ -10,9 +10,9 @@ function ItemCardComponent({ product }) {
   return (
     <div className="card">
       <h4 className="text-center">{product.title}</h4>
-      <h6>({product.vendor})</h6>
+      <h6>({product.title?.slice(0.5)})</h6>
       <img
-        src={product.thumbnail}
+        src={product.images[0] || "https://i.imgur.com/1twoaDy.jpeg"}
         className="card-img-top"
         alt={product.title}
       />
@@ -27,9 +27,9 @@ function ItemCardComponent({ product }) {
               </i>
             </b>
           </div>
-          <h5>₹{product.price - (product.price * product.discount) / 100}</h5>
+          <h5>₹{product.price - (product.price * 10) / 100}</h5>
           <i className="offer">
-            <p>{product.discount}% off</p>
+            <p>{10}% off</p>
           </i>
         </div>
         <h6>

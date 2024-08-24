@@ -8,7 +8,7 @@ function ImageSliderComponent(props) {
         <div className="carousel-inner">
           {images?.map((image, i) => {
             return (
-              <div className="carousel-item active" key={i}>
+              <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={i}>
                 <img
                   src={image}
                   style={{
