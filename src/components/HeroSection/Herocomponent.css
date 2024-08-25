@@ -1,20 +1,178 @@
-.heading-style {
-  font-family: "Edu VIC WA NT Beginner", cursive;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 30px;
-  letter-spacing: 2px;
+/* General Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.hero-color-theme {
+
+.textBlack {
+  color: #000;
+}
+
+/* Hero Background Styling */
+.hero-background {
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* Heading Style */
+.heading-style p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.heading-style span {
   color: coral;
 }
-.hero-ul
-{
-  
-  font-weight: bold;
-}
-.hero-background{
-margin-top: 20px;
 
+/* Flexbox Layout for Columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Column Styling */
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+.col-2 {
+  flex: 0 0 16.6667%;
+  max-width: 16.6667%;
+}
+
+.hero-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.hero-ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  text-align: center;
+  color: #333;
+}
+
+.chat-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: coral;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+.chat-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.chat-message {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.chat-message p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+.hero-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+.hero-ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.hero-ul li:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+.hero-ul i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: coral;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.find-button {
+  background-color: rgb(122, 218, 122);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.find-button i {
+  font-size: 1.2rem;
+}
+
+.find-button:hover {
+  background-color: #005700;
+  transform: scale(1.05);
+}
+
+.find-button:focus {
+  outline: none;
+}
+
+.how-to-order {
+  border: coral;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.how-to-order i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.how-to-order:hover {
+  cursor: pointer;
+}
+.playIcon {
+  border-radius: 50px;
 }
