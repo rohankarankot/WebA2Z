@@ -1,13 +1,4 @@
-.wrapper {
-  padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    background-color: #7BD3EA;
-  }
-  
-  .card {
+.card {
     background-color: #A1EEBD;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;

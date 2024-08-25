@@ -2,6 +2,7 @@ export const ROUTES = [
   { route: "/menu", name: "Menus" },
   { route: "/offers", name: "Offers" },
   { route: "/services", name: "Services" },
+  { route: "/cart", name: "Cart" },
   {
     route: "",
     name: "more",
@@ -11,4 +12,5 @@ export const ROUTES = [
       { route: "/faq", name: "FAQ" },
     ],
   },
+
 ];

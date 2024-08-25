@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./itemcard.component.css";
 
 function ItemCardComponent({ product }) {
   let ratingc;

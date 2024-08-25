@@ -10,9 +10,8 @@ function NavbarComponent() {
   const { cart } = useContext(CartContext);
   return (
     <div>
-      <nav
-        className={`container navbar navbar-dark navbar-expand-lg bg-body-tertiary ${styles.bg}`}
-      >
+      <nav className={`container navbar navbar-dark navbar-expand-lg bg-body-tertiary ${styles.bg}`}>
+      
         <div className="container-fluid">
           <Link to={"/"} className={`navbar-brand ${styles.c_navbar_brand}`}>
             {BRAND_NAME_SHORT}
@@ -93,8 +92,9 @@ function NavbarComponent() {
               <i class="fa-solid fa-right-to-bracket"style={{marginLeft:"5px"}} ></i>
              
             </button>
+            </Link>
            
-           </Link>
+           <Link to = "/cart">
             <button type="button" class="btn btn-primary position-relative">
               cart
               <i class="fa-solid fa-cart-shopping"></i>
@@ -104,6 +104,7 @@ function NavbarComponent() {
                 </span>
               }
             </button>
+            </Link>
           </div>
         </div>
       </nav>
