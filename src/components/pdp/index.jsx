@@ -3,31 +3,48 @@ import ImageSliderComponent from "./imageSlider.component";
 import { useSearchParams } from "react-router-dom";
 import data from "../../mock/feed.json";
 import { CartContext } from "../../context/cart.context";
+import axios from "axios";
 
 function ProductDec() {
   let [searchParams] = useSearchParams();
   const [currentProd, setcurrentProd] = useState();
+  console.log('currentProd:~~~> ', currentProd);
   const { setCart } = useContext(CartContext);
   useEffect(() => {
     const productId = searchParams.get("id");
-    const currentProduct = data.data?.filter(
-      (product) => product.id == productId
-    );
-    setcurrentProd(currentProduct[0]);
+
+    let config = {
+      method: 'get',
+      url: `https://api.escuelajs.co/api/v1/products/${productId}`,
+
+    };
+    axios.request(config)
+      .then((response) => {
+        setcurrentProd(response.data);
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+
+    setcurrentProd();
   }, [searchParams]);
 
   const handleCart = (action) => {
+
     if (action === "add") {
-      setCart((prev) => prev + 1);
+      let tempCart = { ...currentProd, qty: 2, totalPrice: currentProd.price * 2 }
+
+      console.log('tempCart: ', tempCart);
+      setCart(tempCart);
     } else {
-      setCart((prev) => {
-        if (prev <= 0) {
-          return 0;
-        }
-        return prev - 1;
-      });
+
     }
   };
+
+
+
 
   return (
     <div className="container ">
@@ -41,11 +58,12 @@ function ProductDec() {
               <h5 className="text-success">
                 ₹
                 {currentProd?.price -
-                  (currentProd?.price * currentProd?.discount) / 100}
+                  (currentProd?.price * 20) / 100}
               </h5>
               <s className="text-danger">₹{currentProd?.price}</s>
               <p className="text-warning">{currentProd?.discount}% off</p>
             </div>
+            <h3>{currentProd?.description?.slice(0, 50)}...</h3>
             <h6>
               Rating:{" "}
               <span className="badge bg-dark">{currentProd?.rating}</span>
@@ -73,7 +91,7 @@ function ProductDec() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
