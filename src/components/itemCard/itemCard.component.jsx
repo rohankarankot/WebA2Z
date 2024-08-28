@@ -36,7 +36,7 @@ function ItemCardComponent({ product }) {
         <h6>
           Rating:{" "}
           <span
-            class="badge bg-dark"
+            className="badge bg-dark"
             style={{ color: ratingc, fontWeight: 700 }}
           >
             {product.rating}

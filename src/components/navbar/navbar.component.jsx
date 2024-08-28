@@ -7,11 +7,11 @@ import { ROUTES } from "../../routes";
 import { CartContext } from "../../context/cart.context";
 
 function NavbarComponent() {
-  const { cart } = useContext(CartContext);
+  const { cart, location } = useContext(CartContext);
   return (
     <div>
       <nav className={`container navbar navbar-dark navbar-expand-lg bg-body-tertiary ${styles.bg}`}>
-      
+
         <div className="container-fluid">
           <Link to={"/"} className={`navbar-brand ${styles.c_navbar_brand}`}>
             {BRAND_NAME_SHORT}
@@ -33,7 +33,7 @@ function NavbarComponent() {
                 return (
                   <>
                     {route.isDropDown ? (
-                      <li className={`nav-item dropdown ${styles.gap_10}`}>
+                      <li className={`nav-item dropdown ${styles.gap_10}`} key={route.name}>
                         <a
                           className="nav-link dropdown-toggle"
                           href="/"
@@ -51,11 +51,10 @@ function NavbarComponent() {
                                   key={`${route.route}`}
                                   to={`${route.route}`}
                                   className={({ isActive }) => {
-                                    return ` ${
-                                      isActive
-                                        ? `dropdown-item active`
-                                        : `dropdown-item`
-                                    }`;
+                                    return ` ${isActive
+                                      ? `dropdown-item active`
+                                      : `dropdown-item`
+                                      }`;
                                   }}
                                 >
                                   {route.name}
@@ -66,16 +65,15 @@ function NavbarComponent() {
                         </ul>
                       </li>
                     ) : (
-                      <li className="nav-item">
+                      <li className="nav-item" key={route.name}>
                         <NavLink
                           key={`${route.route}`}
                           to={`${route.route}`}
                           className={({ isActive }) => {
-                            return ` ${
-                              isActive
-                                ? `nav-link active ${styles.gap_10}`
-                                : `nav-link ${styles.gap_10}`
-                            }`;
+                            return ` ${isActive
+                              ? `nav-link active ${styles.gap_10}`
+                              : `nav-link ${styles.gap_10}`
+                              }`;
                           }}
                         >
                           {route.name}
@@ -86,25 +84,28 @@ function NavbarComponent() {
                 );
               })}
             </ul>
-           <Link to={"/login"} >
-           <button type="button" class="btn btn-link" style={{marginRight:"20px"}}>
-              Login
-              <i class="fa-solid fa-right-to-bracket"style={{marginLeft:"5px"}} ></i>
-             
-            </button>
+            <p className="text-white"> {location?.address?.city}</p>
+            <i className="fa-solid fa-location-dot text-white " style={{ fontSize: "25px", marginRight: "20px" }}></i>
+            <Link to={"/login"} >
+              <button type="button" className="btn btn-link" style={{ marginRight: "20px" }}>
+                Login
+                <i className="fa-solid fa-right-to-bracket" style={{ marginLeft: "5px" }} ></i>
+
+              </button>
             </Link>
-           
-           <Link to = "/cart">
-            <button type="button" class="btn btn-primary position-relative">
-              cart
-              <i class="fa-solid fa-cart-shopping"></i>
-              {
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                  {cart}
-                </span>
-              }
-            </button>
+
+            <Link to="/cart">
+              <div className=" position-relative text-white">
+
+                <i className="fa-solid fa-cart-shopping" style={{ fontSize: "25px" }}></i>
+                {
+                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                    {cart}
+                  </span>
+                }
+              </div>
             </Link>
+
           </div>
         </div>
       </nav>

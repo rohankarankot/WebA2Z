@@ -7,9 +7,10 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState(20);
+  const [location, setLocation] = useState("default");
   return (
     <>
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, setCart, location, setLocation }}>
         <NavbarComponent />
         <RootRouting />
         <FooterComponent />
