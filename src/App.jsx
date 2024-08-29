@@ -4,7 +4,6 @@ import FooterComponent from "./components/footer/footer.component";
 import RootRouting from "./Routing";
 import { CartContext } from "./context/cart.context";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { getUserLocation } from "./helpers/geolocation";
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
 
 
   useEffect(() => {
-
     getUserLocation(setLocation);
   }, [])
 
