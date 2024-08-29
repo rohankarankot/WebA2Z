@@ -8,7 +8,6 @@ import axios from "axios";
 function ProductDec() {
   let [searchParams] = useSearchParams();
   const [currentProd, setcurrentProd] = useState();
-  console.log('currentProd:~~~> ', currentProd);
   const { setCart } = useContext(CartContext);
   useEffect(() => {
     const productId = searchParams.get("id");
@@ -21,7 +20,6 @@ function ProductDec() {
     axios.request(config)
       .then((response) => {
         setcurrentProd(response.data);
-        console.log(JSON.stringify(response.data));
       })
       .catch((error) => {
         console.error(error);
@@ -29,6 +27,8 @@ function ProductDec() {
 
 
     setcurrentProd();
+
+
   }, [searchParams]);
 
   const handleCart = (action) => {

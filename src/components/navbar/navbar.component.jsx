@@ -84,7 +84,7 @@ function NavbarComponent() {
                 );
               })}
             </ul>
-            <p className="text-white"> {location?.address?.city}</p>
+            <p className="text-white"> {location?.address?.city || "fetching your city"}</p>
             <i className="fa-solid fa-location-dot text-white " style={{ fontSize: "25px", marginRight: "20px" }}></i>
             <Link to={"/login"} >
               <button type="button" className="btn btn-link" style={{ marginRight: "20px" }}>
