@@ -28,7 +28,7 @@ function HomePage() {
 
   return (
     <div>
-      <HighlightComponent />
+
       <HeroComponent />
 
       <div>
