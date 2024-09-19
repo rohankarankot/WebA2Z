@@ -11,6 +11,7 @@ import { store } from "./store/store";
 
 function App() {
   const [cart, setCart] = useState(20);
+
   const [location, setLocation] = useState({
     address: { city: "fetching location" }
   });
@@ -18,6 +19,8 @@ function App() {
 
   useEffect(() => {
     getUserLocation(setLocation);
+
+
   }, [])
 
 
@@ -27,10 +30,10 @@ function App() {
       <Provider store={store}>
 
         <CartContext.Provider value={{ cart, setCart, location, setLocation }}>
-          <HighlightComponent />
-          {/* <NavbarComponent />
-        <RootRouting />
-        <FooterComponent /> */}
+          {/* <HighlightComponent /> */}
+          <NavbarComponent />
+          <RootRouting />
+          <FooterComponent />
         </CartContext.Provider>
       </Provider>
     </>

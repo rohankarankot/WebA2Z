@@ -1,14 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ImageSliderComponent from "./imageSlider.component";
 import { useSearchParams } from "react-router-dom";
-import data from "../../mock/feed.json";
-import { CartContext } from "../../context/cart.context";
 import axios from "axios";
+import { addProduct } from "../../store/features/cartSlice";
+import { useDispatch } from "react-redux";
 
 function ProductDec() {
   let [searchParams] = useSearchParams();
   const [currentProd, setcurrentProd] = useState();
-  const { setCart } = useContext(CartContext);
+
+  const dispatch = useDispatch()
+  console.log('currentProd: ', currentProd);
+
+
   useEffect(() => {
     const productId = searchParams.get("id");
 
@@ -34,11 +38,21 @@ function ProductDec() {
   const handleCart = (action) => {
 
     if (action === "add") {
-      let tempCart = { ...currentProd, qty: 2, totalPrice: currentProd.price * 2 }
+      let itemTobeAdded = {
+        id: currentProd.id,
+        title: currentProd.title,
+        qty: 1,
+        price: currentProd.price,
+        image: currentProd.images[0],
+      }
 
-      console.log('tempCart: ', tempCart);
-      setCart(tempCart);
+
+      dispatch(addProduct(itemTobeAdded))
+
+
+
     } else {
+      alert("hey you clicked minus")
 
     }
   };
@@ -75,7 +89,7 @@ function ProductDec() {
                 className="btn btn-danger"
                 onClick={() => handleCart("remove")}
               >
-                -
+                <i class="fa-solid fa-minus" style={{ fontSize: "20px", }}></i>
               </button>
               <button type="button" className="btn btn-primary-outlined">
                 Add
@@ -85,7 +99,7 @@ function ProductDec() {
                 className="btn btn-success"
                 onClick={() => handleCart("add")}
               >
-                +
+                <i class="fa-solid fa-plus" style={{ fontSize: "20px", }}></i>
               </button>
             </div>
           </div>

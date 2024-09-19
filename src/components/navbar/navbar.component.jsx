@@ -5,9 +5,17 @@ import { BRAND_NAME_SHORT } from "../../constants";
 import { Link, NavLink } from "react-router-dom";
 import { ROUTES } from "../../routes";
 import { CartContext } from "../../context/cart.context";
+import { useSelector } from "react-redux";
 
 function NavbarComponent() {
-  const { cart, location } = useContext(CartContext);
+  const { location } = useContext(CartContext);
+
+  const data = useSelector((state) => state.cart)
+  const { cartItems } = data
+  console.log('cartItems: ', cartItems);
+
+
+
   return (
     <div>
       <nav className={`container navbar navbar-dark navbar-expand-lg bg-body-tertiary ${styles.bg}`}>
@@ -100,7 +108,7 @@ function NavbarComponent() {
                 <i className="fa-solid fa-cart-shopping" style={{ fontSize: "25px" }}></i>
                 {
                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                    {cart}
+                    {cartItems.length}
                   </span>
                 }
               </div>
