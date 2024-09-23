@@ -8,6 +8,10 @@ function ItemCardComponent({ product }) {
   else if (product.rating > 3 && product.rating < 4)
     ratingc = "rgb(255,165,52)";
   else ratingc = "rgb(255,69,69)";
+  if (product.rating > 4) ratingc = "rgb(87,227,44)";
+  else if (product.rating > 3 && product.rating < 4)
+    ratingc = "rgb(255,165,52)";
+  else ratingc = "rgb(255,69,69)";
   return (
     <div className="card">
       <h4 className="text-center">{product.title}</h4>
